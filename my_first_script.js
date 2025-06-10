@@ -12,5 +12,7 @@ my_func2() {
 var A = 10
 var B = 30
 var my_var = A < B
-MessageBox.information(my_var)
+if (my_var) 
+    { MessageBox.information("\"Hello World\"") }
+
 }

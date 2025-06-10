@@ -8,10 +8,12 @@ MessageBox.information(bool)
 
 /* Fonction2 :  "This is fine" dans ToonBoom. Sert à tester les nouvelles notions de cours
 à savoir  
-- les booleans (my_var)
-- les strings "Hello World" avec des guillemets \"
-- les arrays
-- les objets
+1- les booleans (my_var)
+2- les strings "Hello World" avec des guillemets \"
+3- les arrays
+4- les objets
+5- les opérateurs
+6- les fonctions
 */
 
 
@@ -79,20 +81,57 @@ var mots1 = "Camion"
   MessageLog.trace("the fox phrase has " + phrase.length + " characters, " + word_count.length + " words, " + "and " + letters.length + " letters")
   
 
-  // Partie 3 : les objets
+  // Partie 4 : les objets
   var student_data = {
       "name" : "Marion" ,
       "max_brain_capacity" : 100 , 
       "damage_per_new_information" : 10 , 
-      "learning score" : 20 , 
-      "skill" : {
+      "learning_score" : 20 , 
+      "new_information" : 30 , 
+      "skills" : {
           "coding tools" : ["VSCODE", "TOONBOOM" , "Github Desktop"] ,
           "professional skills" : ["excel","production management","people skill"] ,
           
         }
     }
+
+MessageLog.trace(student_data.skills["coding tools"][0])
+
 var current_braincapacity = student_data.max_brain_capacity 
 current_braincapacity -= student_data.damage_per_new_information // dommages liés aux arrays
 current_braincapacity -= student_data.damage_per_new_information // dommages liés aux objets
+current_braincapacity -= student_data.damage_per_new_information // dommages liés aux opérateurs
 MessageBox.information("Marion's current brain capacity is : " + current_braincapacity + " /" + student_data.max_brain_capacity)
+
+student_data["learning_score"] += student_data.new_information // +30 points de score pour les booléens
+student_data["learning_score"] += student_data.new_information // +30 points de score pour les strings
+student_data["learning_score"] += student_data.new_information // +30 points de score pour les arrays
+student_data["learning_score"] += student_data.new_information // +30 points de score pour les objets 
+student_data["learning_score"] += student_data.new_information // +30 points de score pour les opérateurs 
+MessageBox.information("Marion's current learning score is : " + student_data["learning_score"])
+
+//Partie 05 : les opérateurs
+
+//opérateur if
+if (current_braincapacity >= 0 && student_data.learning_score <200){
+    MessageBox.information("Marion has earned " + student_data.learning_score + "points ! She is ready to continue learning !") }
+
+ if (current_braincapacity >= 0 && student_data.learning_score > 200) {
+    MessageBox.information("Marion is satisfied with what she's learned today")
+}
+
+if(current_braincapacity < 0){
+    Messagebox.information("Stop it !! Marion can't take more information today, she's too tired.")
+}
+
+// opérateur for 
+
+//Partie 06 : les fonctions
+
+function addition( _A , _B ){
+    var somme = _A + _B
+}
+
+Messagebox.information(addition(10,10))
+
 }

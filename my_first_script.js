@@ -1,10 +1,28 @@
-// Fonction1  "Awkward monkey" dans ToonBoom, test
+// Fonction1  "Awkward monkey" dans ToonBoom, exercice de cours
 function my_func() {
 
-var bool = true
-bool = true
-MessageBox.information(bool)
-} 
+    function split_space(_phrase){
+        var words = _phrase.split(" ")
+        return words 
+    }
+
+    function count_the_letters(_phrase){
+        var words = split_space(_phrase)
+        var letters = words.join("")
+        MessageBox.information("The phrase has " + letters.length + " letters")
+    }
+    
+    function count_the_words(_phrase){ 
+        var words = split_space(_phrase)
+        MessageBox.information("The phrase has " + words.length + " words")
+        
+    }
+
+    var phrase = "the quick brown fox jumps over the lazy dog"
+    count_the_letters(phrase)
+    count_the_words(phrase)
+}
+   
 
 /* Fonction2 :  "This is fine" dans ToonBoom. Sert à tester les nouvelles notions de cours
 à savoir  
@@ -128,8 +146,9 @@ if(current_braincapacity < 0){
 
 //Partie 06 : les fonctions
 
-function addition( _A , _B ){
+function addition( _A , _B ) {
     var somme = _A + _B
+    return somme
 }
 
 Messagebox.information(addition(10,10))

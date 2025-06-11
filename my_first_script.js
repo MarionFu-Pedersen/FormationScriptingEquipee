@@ -151,6 +151,6 @@ function addition( _A , _B ) {
     return somme
 }
 
-Messagebox.information(addition(10,10))
+MessageLog.trace(addition(10,10))
 
 }

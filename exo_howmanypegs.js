@@ -41,6 +41,7 @@ function BT_rotate_peg_90degrees(){
     MessageLog.trace("old rotation is : " + old_angle)
     new_angle = old_angle + 90
     MessageLog.trace("new rotation is : " + new_angle)
+    set_rotation(selected_peg,new_angle)
    
 }
         

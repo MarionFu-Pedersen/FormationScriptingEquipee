@@ -4,8 +4,8 @@
 
 include("C:/Users/Travail-4/Documents/Formation_TB_Scripting/FormationScriptingEquipee/useful_function.js")
 
-
-function show_how_many_pegs(){
+// le préfixe BT signifie que la fonction est un bouton
+function BT_show_how_many_pegs(){
     var peg_list = node.getNodes(["PEG"])
     var rotated_pegs = []
 
@@ -32,6 +32,17 @@ else {
 }
       
       }
+
+
+function BT_rotate_peg_90degrees(){
+    var selected_peg = selection.selectedNode(0)
+    MessageLog.trace("rotation applied to : " + selected_peg)
+    old_angle = parseFloat(get_rotation(selected_peg))
+    MessageLog.trace("old rotation is : " + old_angle)
+    new_angle = old_angle + 90
+    MessageLog.trace("new rotation is : " + new_angle)
+   
+}
         
 
 

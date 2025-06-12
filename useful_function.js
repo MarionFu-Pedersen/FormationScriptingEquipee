@@ -1,7 +1,8 @@
 
 // In TB Harmony, get the rotation value of a peg (on axis Z, simple rotation in 2D environment)
 function get_rotation(peg){
-    var rotation = node.getTextAttr(peg,frame.current(),"ROTATION.ANGLEZ")
+    var rotation_string = node.getTextAttr(peg,frame.current(),"ROTATION.ANGLEZ")
+    rotation = parseFloat(rotation_string)
     return rotation
 }
 

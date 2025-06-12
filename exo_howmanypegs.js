@@ -36,11 +36,8 @@ else {
 
 function BT_rotate_peg_90degrees(){
     var selected_peg = selection.selectedNode(0)
-    MessageLog.trace("rotation applied to : " + selected_peg)
-    old_angle = parseFloat(get_rotation(selected_peg))
-    MessageLog.trace("old rotation is : " + old_angle)
+    old_angle = get_rotation(selected_peg)
     new_angle = old_angle + 90
-    MessageLog.trace("new rotation is : " + new_angle)
     set_rotation(selected_peg,new_angle)
    
 }

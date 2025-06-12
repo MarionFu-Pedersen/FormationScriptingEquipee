@@ -2,11 +2,7 @@
 
 //but de l'exercice : on veut la liste des pegs dont la rotation n'est pas 0
 
-function get_rotation(peg){
-    var rotation = node.getTextAttr(peg,frame.current(),"ROTATION.ANGLEZ")
-    return rotation
-}
-
+include("C:/Users/Travail-4/Documents/Formation_TB_Scripting/FormationScriptingEquipee/useful_function.js")
 
 
 function show_how_many_pegs(){

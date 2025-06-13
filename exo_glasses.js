@@ -7,19 +7,21 @@ include ("C:/Users/Travail-4/Documents/Formation_TB_Scripting/FormationScripting
 function glasses(){
     var node_name = "GLASSES_X12_Y7"
     var coords = find_coord_in_string(node_name)
-    var position_x = coords.x
-   var position_y = coords.y
-   var node_list = node.getNodes(["PEG"])
+    var position_x = -12
+    var position_y = 7
+    var node_list = node.getNodes(["PEG"])
     MessageLog.trace("list of pegs : " + node_list)
    for ( var i in node_list ){
     current_peg = node_list[i]
-    if (current_peg.indexOf("GLASSES") != false){
+    if (current_peg.indexOf("GLASSES") != -1){
         MessageLog.trace("This peg has glasses")
-        node.setCoord(current_peg,position_x,position_y)
+        scene.beginUndoRedoAccum("glasses")
+        set_position(current_peg,position_x,position_y)
+        scene.endUndoRedoAccum()
+    continue
     }
     
    }
-    MessageBox.information(JSON.stringify(coords))
 }
 
 

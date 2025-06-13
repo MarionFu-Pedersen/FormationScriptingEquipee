@@ -14,10 +14,10 @@ function glasses(){
    for ( var i in node_list ){
     current_peg = node_list[i]
     if (current_peg.indexOf("GLASSES") != -1){
-        MessageLog.trace("This peg has glasses")
-        scene.beginUndoRedoAccum("glasses")
-        set_position(current_peg,position_x,position_y)
-        scene.endUndoRedoAccum()
+        MessageLog.trace("This peg has glasses : " + current_peg)
+        scene.beginUndoRedoAccum("glasses") //balise pour que en faisant ctrl+Z l'action de la fonction soit undo en 1 fois plutôt qu'en plusieurs
+            set_position(current_peg,position_x,position_y)
+        scene.endUndoRedoAccum() //fin de la balise
     continue
     }
     
@@ -68,7 +68,7 @@ function find_coord_in_string(_string){
         var frist_char = current_split[0]
         var number = extract_number(current_split)
         if(frist_char=="X"){
-            coords.x = number
+            coords.x = -number
             continue
         }        
         if(frist_char=="Y"){

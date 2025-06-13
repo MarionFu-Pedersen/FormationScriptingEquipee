@@ -1,6 +1,8 @@
-function test_set_coordinates(){
-    var peg = selection.selectedNode(0)
-    node.setTextAttr(peg,"POSITION.X", frame.current(),10)
+// pour tester des bouts de code dans TB
 
-        }
-
+function test()
+{
+    var _node = selection.selectedNode(0)
+    var new_name = "FLEUR"
+    node.rename(_node,new_name)
+}

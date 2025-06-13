@@ -1,0 +1,24 @@
+<html>
+<body>
+    <div>
+        <div id="titre_page">BONJOUR MARION ! </div>
+    </div>
+    <button onclick="fait_un_truc()">
+        BUTTON
+    </button>
+</body>
+<script>
+
+    var text = ""
+
+    function fait_un_truc(){
+        text+="ECHO"
+        console.log("un truc")
+        document.getElementById("titre_page").innerHTML = text
+    }
+
+
+</script>
+
+
+</html>
